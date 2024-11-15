@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CommentInput from './CommentInput';
 import Comment from './Comment';
+import '../styles/CommentSection.css';
 
 const CommentSection = () => {
   const [comments, setComments] = useState([]);
@@ -22,7 +23,7 @@ const CommentSection = () => {
   };
 
   return (
-    <div>
+    <div className="comment-section">
       <h2>댓글</h2>
       <CommentInput onSubmit={addComment} />
       {comments.map((comment) => (
@@ -33,4 +34,5 @@ const CommentSection = () => {
 };
 
 export default CommentSection;
+
 

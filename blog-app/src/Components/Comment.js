@@ -50,34 +50,31 @@ const Comment = ({ comment, comments, updateComments }) => {
   };
 
   return (
-    <div style={{ margin: '10px 0', display: 'flex', alignItems: 'center' }}>
-      <img className="Comment-profile"src={comment.profileImage} alt="프로필" />
-      <div className='Comment-container'>
+    <div className="comment-container">
+      <img className="comment-profile" src={comment.profileImage} alt="프로필" />
+      <div className="comment-content">
         <strong>익명</strong>
         <p>{comment.isSecret ? '비밀 댓글입니다.' : comment.text}</p>
 
-        <button className="Like-button" onClick={toggleLike}>
+        <button className="like-button" onClick={toggleLike}>
           <i className="fa-regular fa-heart"></i> ({comment.likes})
         </button>
 
-        <div className='Comment-options'>
-          <button onClick={() => setShowOptions(!showOptions)} className="More-button">
-            <i className="fa-solid fa-ellipsis"></i>
-          </button>
+        <button
+          onClick={() => setShowOptions(!showOptions)}
+          className="more-button"
+        >
+          <i className="fa-solid fa-ellipsis"></i>
+        </button>
 
-          {showOptions && (
-            <div className='More-options'>
-              <button onClick={() => setShowReplyInput(!showReplyInput)} className="Comment-button">
-                답글 작성
-              </button>
-              <button onClick={toggleSecret}>
-                {comment.isSecret ? '비밀 해제' : '비밀로 하기'}
-              </button>
-              <button onClick={deleteComment}>삭제</button>
-              <button onClick={() => alert("신고 접수")}>신고</button>
-            </div>
-          )}
-        </div>
+        {showOptions && (
+          <div className="more-options">
+            <button onClick={() => setShowReplyInput(!showReplyInput)}>답글 작성</button>
+            <button onClick={toggleSecret}>{comment.isSecret ? '비밀 해제' : '비밀로 하기'}</button>
+            <button onClick={deleteComment}>삭제</button>
+            <button onClick={() => alert("신고 접수")}>신고</button>
+          </div>
+        )}
 
         {showReplyInput && <ReplyInput onSubmit={addReply} />}
         
@@ -90,5 +87,6 @@ const Comment = ({ comment, comments, updateComments }) => {
 };
 
 export default Comment;
+
 
 
