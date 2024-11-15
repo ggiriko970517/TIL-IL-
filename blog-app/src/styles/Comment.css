@@ -21,7 +21,17 @@
 
 }
 
+.Comment-profile {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
 .More-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
   background: none;
   border: none;
   cursor: pointer;

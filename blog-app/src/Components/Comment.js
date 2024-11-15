@@ -51,7 +51,7 @@ const Comment = ({ comment, comments, updateComments }) => {
 
   return (
     <div style={{ margin: '10px 0', display: 'flex', alignItems: 'center' }}>
-      <img src={comment.profileImage} alt="프로필" style={{ borderRadius: '50%', width: '50px', height: '50px', marginRight: '10px' }} />
+      <img className="Comment-profile"src={comment.profileImage} alt="프로필" />
       <div className='Comment-container'>
         <strong>익명</strong>
         <p>{comment.isSecret ? '비밀 댓글입니다.' : comment.text}</p>
