@@ -1,0 +1,49 @@
+.Comment-container {
+  position: relative;
+  width: 200px;
+  height: 90px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.Like-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Comment-options {
+  display: inline-block;
+   position: relative;
+
+}
+
+.More-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+} 
+
+
+.More-options {
+  display: flex;
+  flex-direction: column;
+  top: 25px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.More-options button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 5px 0;
+  text-align: right;
+}
